@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" id="html-tag">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimmy’s Dinner App</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Jimmy’s Dinner</h1>
+        <h2>The best burgers and pizzas in town.</h2>
+        <label class="switch">
+            <input id="toggle-switch" type="checkbox">
+            <span class="slider round"></span>
+        </label>
+        <span id="mode-text">Dark Mode</span>
+    </header>
+    <main>
+        <div id="items-menu"></div>
+        <div id="order-section" class="order-section">
+            <h2>Your order</h2>
+            <div id="order-container" class="order-container">
+            </div>
+            <div class="total-price">
+                <p>Total price :</p>
+                <p id="order-total-price" class="order-price"></p>
+            </div>
+            <button id="complete-order-btn" class="complete-order-btn">Complete order</button>
+        </div>
+        <div class="modal" id="modal">
+            <h2>Enter card details</h2>
+            <form id="my-form">
+                <input name="form-name" id="form-name" required placeholder="Enter your name" type="text">
+                <input name="form-card" id="form-card" required pattern="[0-9]+" placeholder="Enter card number" type="text">
+                <input name="form-cvv" id="form-cvv" required pattern="[0-9]+" placeholder="Enter CVV" type="text">
+                <button class="pay-btn" type="submit">Pay</button>
+                <button id="close-btn" type="button">Go Back</button> 
+            </form>
+        </div>
+    </main>
+
+    <script src="index.js" type="module"></script>
+</body>
+</html>
